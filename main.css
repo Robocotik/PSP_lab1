@@ -60,10 +60,10 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.bigDick {
+.big {
   width: 100%;
   border-radius: 30px;
-  grid-column: span 2 !important;
+  grid-column: span 2;
 }
 
 .orange {
@@ -99,9 +99,10 @@ main {
 
 .col1 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 3vh;
   align-items: center;
-  gap: 1vw;
   flex-direction: column;
   box-shadow: 5px 5px 20px #ff00ff;
   padding: 10px;
@@ -110,9 +111,16 @@ main {
 }
 
 .col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
-  background: red;
-  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  gap: 20px;
+  box-shadow: 5px 5px 20px #00ffff;
 }
 
 body {
@@ -123,4 +131,37 @@ body {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+}
+
+.dropdown {
+  display: flex; /* Делаем контейнер строчным блоком */
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-content {
+  flex-direction: column;
+  align-items: center;
+  height: 0;
+  background-color: white;
+  color: rgba(0, 0, 0, 0);
+  min-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  & h1 {
+    display: none;
+  }
+}
+
+#author:hover + .dropdown-content {
+  height: 100%;
+  transition: all 1s ease-out;
+  & h1 {
+    display: flex;
+  }
+}
+
+#author:hover + .dropdown-content > * {
+  color: gray;
+  transition: all 1s ease-out;
 }
