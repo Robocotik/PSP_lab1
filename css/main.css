@@ -9,7 +9,7 @@
 }
 
 .move {
-  background: url('./src/doc.jpg');
+  background: url('./../src/doc.jpg');
   height: 300px;
   width: 300px;
   position: absolute;
