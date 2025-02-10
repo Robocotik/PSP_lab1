@@ -81,7 +81,23 @@
   box-shadow: 0px 0px 15px currentColor;
 }
 
+.row {
+  display: flex;
+  gap: 20px;
+  height: 90vh;
+  max-height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.col1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +107,12 @@ main {
   padding: 10px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0);
+}
+
+.col2 {
+  height: 100%;
+  background: red;
+  width: 100px;
 }
 
 body {
