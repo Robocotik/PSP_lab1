@@ -1,32 +1,32 @@
 const block = document.querySelector('.move');
-let angle = 0; // угол вращения
-let posX = 0; // текущая позиция по оси X
-let posY = 0; // текущая позиция по оси Y
-let speedX = 2; // скорость по оси X
-let speedY = 2; // скорость по оси Y
+let angle = 0; 
+let posX = 0;
+let posY = 0; 
+let speedX = 2;
+let speedY = 2;
 
 function update() {
-  // Обновляем угол вращения
-  angle += 2; // Увеличиваем угол для вращения
-  block.style.transform = `rotate(${angle}deg)`; // Применяем вращение
+  
+  angle += 2;
+  block.style.transform = `rotate(${angle}deg)`; 
 
-  // Обновляем позицию блока
+  
   posX += speedX;
   posY += speedY;
 
-  // Проверяем столкновение со стенками
+  
   if (posX + block.offsetWidth > window.innerWidth || posX < 0) {
-    speedX = -speedX; // Изменяем направление по оси X
+    speedX = -speedX; 
   }
   if (posY + block.offsetHeight > window.innerHeight || posY < 0) {
-    speedY = -speedY; // Изменяем направление по оси Y
+    speedY = -speedY; 
   }
 
-  // Устанавливаем новую позицию блока
+
   block.style.left = posX + 'px';
   block.style.top = posY + 'px';
 
-  requestAnimationFrame(update); // Запрашиваем следующую анимацию
+  requestAnimationFrame(update); 
 }
 
-update(); // Запускаем анимацию
+update(); 
